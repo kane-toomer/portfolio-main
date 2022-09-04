@@ -1,7 +1,12 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon, MegaphoneIcon } from '@heroicons/react/24/outline'
+import React, { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon, MegaphoneIcon } from '@heroicons/react/24/outline';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+
+// Assets
+import codebg from '../../assets/images/code.svg';
 
 const navigation = [
   { name: 'About', href: '#about' },
@@ -69,7 +74,7 @@ const Landing = () => {
                     <a href="/">
                       <span className="sr-only">Kane Toomer</span>
                       <img
-                        alt="Your Company"
+                        alt="My Face"
                         className="h-8 w-auto sm:h-10"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                       />
@@ -114,7 +119,7 @@ const Landing = () => {
                       <img
                         className="h-8 w-auto"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt=""
+                        alt="My Face"
                       />
                     </div>
                     <div className="-mr-2">
@@ -180,7 +185,7 @@ const Landing = () => {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
-          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          src={codebg}
           alt=""
         />
       </div>
@@ -209,10 +214,32 @@ const Landing = () => {
                   <br />
                   <br />
                   I am someone who (for many years) loved to design random apps and code them for fun. I started programming in high school and this carried over for much of my undergrad before pursuing other efforts. Now I am a career changer who has decided to take the first step in turning my hobby into a career. 
+                  {/* <br />
+                  <br />
+                  Here are a few technologies I’ve been working with recently: */}
                   <br />
                   <br />
                   I have experience with <span className='font-bold text-indigo-300'>HTML</span>, <span className='font-bold text-indigo-300'>CSS</span> & <span className='font-bold text-indigo-300'>JavaScript</span>. I use frameworks like <span className='font-bold text-indigo-300'>React.js</span> & <span className='font-bold text-indigo-300'>React Native</span> (w/ <span className='font-bold text-indigo-300'>Redux</span> for state management). On the backend I like to use <span className='font-bold text-indigo-300'>Firebase</span> (because its easy to implement but scalable). However, I have experience with <span className='font-bold text-indigo-300'>Node.js</span>, <span className='font-bold text-indigo-300'>Express.js</span>, <span className='font-bold text-indigo-300'>Knex.js</span> & <span className='font-bold text-indigo-300'>PostgreSQL</span>.
                   </p>
+                  {/* <div className='mt-5'>
+                    <div className='grid grid-rows-1'>
+                      <div className='grid grid-cols-2'>
+                        <ul className='text-base text-gray-500'>
+                          <li className='font-bold text-indigo-300'>Javascript (ES6+)</li>
+                          <li className='font-bold text-indigo-300'>React</li>
+                          <li className='font-bold text-indigo-300'>React Native</li>
+                          <li className='font-bold text-indigo-300'>Redux</li>
+                          <li className='font-bold text-indigo-300'>Firebase</li>
+                        </ul>
+                        <ul className='text-base text-gray-500'>
+                          <li className='font-bold text-indigo-300'>Node.js</li>
+                          <li className='font-bold text-indigo-300'>Express.js</li>
+                          <li className='font-bold text-indigo-300'>Knex.js</li>
+                          <li className='font-bold text-indigo-300'>PostgreSQL</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> */}
               </div>
               
     
@@ -233,6 +260,59 @@ const Landing = () => {
           </div>
       </div>
       {/* END PROJECTS SECTION */}  
+
+      {/* CONTACT SECTION */}
+      <div className="bg-gray-100 py-10" id='contact'>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <div className='my-10'>
+            <h1 className="mb-5 pb-5 font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <span className="block text-6xl">I am open to</span>
+              <span className="block  text-6xl text-indigo-600">new possibilities!</span>
+            </h1>
+            
+            <p className='text-base mb-10 pb-10 sm:text-lg md:text-xl'>Feel free to connect with me via LinkedIn or email me!</p>
+            
+            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
+              <div className="rounded-md shadow">
+                <a
+                  href="https://www.linkedin.com/in/kanetoomer/"
+                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
+                >
+                  <FontAwesomeIcon className='mr-2' icon={faLinkedin} />
+                  LinkedIn
+                </a>
+              </div>
+              <div className="mt-3 sm:mt-0 sm:ml-3">
+                <a
+                  href="mailto:kanetoomer@yahoo.com"
+                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
+                >
+                  Email Me
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* END CONTACT SECTION */}
+
+      {/* FOOTER */}
+      <div className="bg-slate-900 py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <div>
+            <a href="/">
+              <span className="sr-only">Kane Toomer</span>
+              <img
+                alt="My Face"
+                className="h-8 w-auto sm:h-10"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* END FOOTER */}
 
     </>
   )
