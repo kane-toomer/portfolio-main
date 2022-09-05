@@ -4,6 +4,7 @@ import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon, MegaphoneIcon } from '@heroicons/react/24/outline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 // Assets
 import codebg from '../../assets/images/code.svg';
@@ -93,7 +94,7 @@ const Landing = () => {
                       {item.name}
                     </a>
                   ))}
-                  <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                  <a href="#" className="font-medium text-indigo-600 hover:text-indigo-900">
                     Connect with Me!
                   </a>
                 </div>
@@ -158,7 +159,7 @@ const Landing = () => {
                 <span className="block text-indigo-600 xl:inline">Kane!</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
-                I'm a fullstack software developer from Las Vegas!
+                I'm a fullstack developer from Las Vegas!
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
@@ -210,7 +211,7 @@ const Landing = () => {
                   </p>
                 </div>
                 <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
-                  My name is Kane Toomer. I'm a software developer from Las Vegas, NV.
+                  My name is Kane Toomer. I'm a fullstack developer from Las Vegas, NV.
                   <br />
                   <br />
                   I am someone who (for many years) loved to design random apps and code them for fun. I started programming in high school and this carried over for much of my undergrad before pursuing other efforts. Now I am a career changer who has decided to take the first step in turning my hobby into a career. 
@@ -298,9 +299,9 @@ const Landing = () => {
       {/* END CONTACT SECTION */}
 
       {/* FOOTER */}
-      <div className="bg-slate-900 py-10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <div>
+      <div className="bg-slate-900 py-5 md:py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className='mt-5 md:mt-10'>
             <a href="/">
               <span className="sr-only">Kane Toomer</span>
               <img
@@ -309,6 +310,39 @@ const Landing = () => {
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               />
             </a>
+            <h1 className='mt-5 font-bold leading-8 tracking-tight text-white sm:text-3xl'>Kane Toomer</h1>
+            <p className="mt-3 mb-10 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">Fullstack Developer</p> 
+          </div>
+
+          <hr className='my-10' />
+          
+          <div className='grid grid-rows-1'>
+            <div className='sm:grid md:grid-cols-2 sm-grid-cols-1'>
+              <div className="mb-5 md:block space-x-8 pr-4">
+                {navigation.map((item) => (
+                  <a key={item.name} href={item.href} className="font-medium text-white hover:underline">
+                    {item.name}
+                  </a>
+                ))}
+                <a href="#" className="font-medium text-white hover:underline">
+                  Download my Resume
+                </a>
+              </div>
+
+              <div className='block inline flex md:justify-end justify-items-center'>
+                <a href="https://www.linkedin.com/in/kanetoomer/" className='text-white text-2xl mr-5'>
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+
+                <a href="https://github.com/kane-toomer" className='text-white text-2xl'>
+                  <FontAwesomeIcon icon={faGithub} className='text-white text-2xl mr-5' />
+                </a>
+
+                <a href="mailto:kanetoomer@yahoo.com" className='text-white text-2xl'>
+                  <FontAwesomeIcon icon={faEnvelope} className='text-white text-2xl' />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
