@@ -8,6 +8,8 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 // Assets
 import codebg from '../../assets/images/code.svg';
+import mememoji1 from '../../assets/images/mememoji1.svg';
+import mememoji2 from '../../assets/images/mememoji2.svg';
 
 const navigation = [
   { name: 'About', href: '#about' },
@@ -76,8 +78,8 @@ const Landing = () => {
                       <span className="sr-only">Kane Toomer</span>
                       <img
                         alt="My Face"
-                        className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        className="h-16 w-auto"
+                        src={mememoji2}
                       />
                     </a>
                     <div className="-mr-2 flex items-center md:hidden">
@@ -118,8 +120,8 @@ const Landing = () => {
                   <div className="flex items-center justify-between px-5 pt-4">
                     <div>
                       <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        className="h-16 w-auto"
+                        src={mememoji1}
                         alt="My Face"
                       />
                     </div>
@@ -220,7 +222,7 @@ const Landing = () => {
                   Here are a few technologies I’ve been working with recently: */}
                   <br />
                   <br />
-                  I have experience with <span className='font-bold text-indigo-300'>HTML</span>, <span className='font-bold text-indigo-300'>CSS</span> & <span className='font-bold text-indigo-300'>JavaScript</span>. I use frameworks like <span className='font-bold text-indigo-300'>React.js</span> & <span className='font-bold text-indigo-300'>React Native</span> (w/ <span className='font-bold text-indigo-300'>Redux</span> for state management). On the backend I like to use <span className='font-bold text-indigo-300'>Firebase</span> (because its easy to implement but scalable). However, I have experience with <span className='font-bold text-indigo-300'>Node.js</span>, <span className='font-bold text-indigo-300'>Express.js</span>, <span className='font-bold text-indigo-300'>Knex.js</span> & <span className='font-bold text-indigo-300'>PostgreSQL</span>.
+                  I have experience with <span className='font-bold text-indigo-300'>HTML</span>, <span className='font-bold text-indigo-300'>CSS</span> & <span className='font-bold text-indigo-300'>JavaScript</span>. I use frameworks like <span className='font-bold text-indigo-300'>React.js</span> & <span className='font-bold text-indigo-300'>React Native</span> (w/ <span className='font-bold text-indigo-300'>Redux</span>). On the backend I like to use <span className='font-bold text-indigo-300'>Firebase</span> (because its easy to implement but scalable). However, I have experience with <span className='font-bold text-indigo-300'>Node.js</span>, <span className='font-bold text-indigo-300'>Express.js</span>, <span className='font-bold text-indigo-300'>Knex.js</span> & <span className='font-bold text-indigo-300'>PostgreSQL</span>.
                   </p>
                   {/* <div className='mt-5'>
                     <div className='grid grid-rows-1'>
@@ -306,8 +308,8 @@ const Landing = () => {
               <span className="sr-only">Kane Toomer</span>
               <img
                 alt="My Face"
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="h-16 w-auto"
+                src={mememoji1}
               />
             </a>
             <h1 className='mt-5 font-bold leading-8 tracking-tight text-white sm:text-3xl'>Kane Toomer</h1>
