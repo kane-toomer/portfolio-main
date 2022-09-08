@@ -1,58 +1,71 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon, MegaphoneIcon } from '@heroicons/react/24/outline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 // Assets
 import codebg from '../../assets/images/code.svg';
 import mememoji1 from '../../assets/images/mememoji1.svg';
 import mememoji2 from '../../assets/images/mememoji2.svg';
+import smartBrain from '../../assets/images/smartbrain.svg';
+import zovy from '../../assets/images/zovy.svg';
 
 const navigation = [
   { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' }
+  { name: 'Projects', href: '#project' }
 ]
 
 const Landing = () => {
+  const [shouldShow, setShouldShow] = useState(true);
+
+  const onAction = () => {
+    setShouldShow(!shouldShow);
+}
 
   return (
   <>
     {/* HEADER BANNER */}
-    <div className="bg-indigo-700">
-      <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-between">
-          <div className="flex w-0 flex-1 items-center">
-            <span className="flex rounded-lg bg-indigo-800 p-2">
-              <MegaphoneIcon className="h-6 w-6 text-white" aria-hidden="true" />
-            </span>
-            <p className="ml-3 truncate font-medium text-white">
-              <span className="md:hidden font-bold">I am open to work!</span>
-              <span className="hidden md:inline font-light">Casually screaming this... <span className="font-bold">I am open to work!</span></span>
-            </p>
-          </div>
-          <div className="order-3 mt-2 w-full flex-shrink-0 sm:order-3 sm:mt-0 sm:w-auto">
-            <a
-              href="#"
-              className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-indigo-600 shadow-sm hover:bg-indigo-50 xs:hidden"
-            >
-              Let's Connect!
-            </a>
-          </div>
-          <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
-            <button
-              type="button"
-              className="-mr-1 flex rounded-md p-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
-            >
-              <span className="sr-only">Dismiss</span>
-              <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
-            </button>
+    {
+      shouldShow ? (
+        <div className="bg-indigo-700">
+          <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center justify-between">
+              <div className="flex w-0 flex-1 items-center">
+                <span className="flex rounded-lg bg-indigo-800 p-2">
+                  <MegaphoneIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                </span>
+                <p className="ml-3 truncate font-medium text-white">
+                  <span className="md:hidden font-bold">I am open to work!</span>
+                  <span className="hidden md:inline font-light">Casually screaming this... <span className="font-bold">I am open to work!</span></span>
+                </p>
+              </div>
+              <div className="order-3 mt-2 w-full flex-shrink-0 sm:order-3 sm:mt-0 sm:w-auto">
+                <a
+                  href="#contact"
+                  className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-indigo-600 shadow-sm hover:bg-indigo-50 xs:hidden"
+                >
+                  Let's Connect!
+                </a>
+              </div>
+              <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+                <button
+                  type="button"
+                  className="-mr-1 flex rounded-md p-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
+                  onClick={onAction}
+                >
+                  <span className="sr-only">Dismiss</span>
+                  <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      ) : null
+    }
     {/* END HEADER BANNER */}
 
     {/* HERO SECTION */}
@@ -253,13 +266,149 @@ const Landing = () => {
       </div>
       {/* END ABOUT SECTION */}
 
-      {/* PROJECTS SECTION */}
-      <div className="bg-white py-12" id="projects">
+      {/* PROJECTS SECTION 1 */}
+      <div className="bg-white py-12" id="project">
           <div className="my-5 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg text-center font-semibold text-indigo-600">Projects</h2>
-            <p className="text-center mt-2 text-3xl font-bold leading-8 tracking-tight sm:text-4xl">
-              
-            </p>
+            <p className="text-center mt-2 text-3xl font-bold leading-8 tracking-tight sm:text-4xl"></p>
+            <div className='grid grid-rows-2 mt-20'>
+
+              {/* PROJECT 1 */}
+              {/* <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center'> */}
+                {/* IMAGE */}
+                {/* <img
+                    alt=""
+                    className="h-full w-full sm:h-72 md:h-96 lg:h-full lg:w-full rounded-lg"
+                    src={}
+                /> */}
+                {/* CARD */}
+                  {/* <div className="py-6 px-10 max-w-lg bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 sm:justify-self-center mt-5 lg:mt-0">
+                      <h5 className="mb-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Untitled</h5>
+                      
+                      <p className='text-base text-gray-300'><span className='text-white font-bold'>About:</span> </p>
+                      <p className='text-base text-indigo-300 mt-5'><span className='text-white font-bold'>Made with:</span>
+                          <ul className='font-bold'>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React.js</li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> </li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> </li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> </li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> </li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> </li>
+                          </ul>
+                      </p>
+                      
+                      <div className="mt-5 sm:mt-8 sm:flex sm:justify-start lg:justify-start">
+                        <div className="rounded-md shadow">
+                          <a
+                            href="https://zovy-3q48sngtb-kane-toomer.vercel.app/"
+                            className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 p-3 text-base font-medium text-white hover:bg-indigo-700 md:p-3"
+                          >
+                            View Live Site
+                          </a>
+                        </div>
+                        <div className="mt-3 sm:mt-0 sm:ml-3">
+                          <a
+                            href="https://github.com/kane-toomer/zovy"
+                            className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 p-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:p-3"
+                          >
+                            View Source Code
+                          </a>
+                        </div>
+                      </div>
+                  </div> 
+              </div> */}
+
+              {/* PROJECT 2 */}
+              <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center mt-20'>
+                {/* IMAGE */}
+                <img
+                    alt="zovy"
+                    className="h-full w-full sm:h-72 md:h-96 lg:h-full lg:w-full rounded-lg"
+                    src={zovy}
+                  />
+                {/* CARD */}
+                  <div className="py-6 px-10 max-w-lg bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 sm:justify-self-center mt-5 lg:mt-0">
+                      <h5 className="mb-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Zovy</h5>
+                      
+                      <p className='text-base text-gray-300'><span className='text-white font-bold'>About:</span> Zovy is a simple streaming platform for 80's and 90's movies and tv shows I watched growing up. This application is a full-stack project where users can register or sign in and be greeted by their dashboard of available listings for their viewing pleasure. User can click on a movie, get a full break down of all the info about the movie and watch a "trailer" of it.</p>
+                      <p className='text-base text-indigo-300 mt-5'><span className='text-white font-bold'>Made with:</span>
+                          <ul className='font-bold'>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React.js</li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React Router</li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React Hooks</li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Bootstrap</li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Firebase</li>
+                              <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Vercel</li>
+                          </ul>
+                      </p>
+                      
+                      <div className="mt-5 sm:mt-8 sm:flex sm:justify-start lg:justify-start">
+                        <div className="rounded-md shadow">
+                          <a
+                            href="https://zovy-3q48sngtb-kane-toomer.vercel.app/"
+                            className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 p-3 text-base font-medium text-white hover:bg-indigo-700 md:p-3"
+                          >
+                            View Live Site
+                          </a>
+                        </div>
+                        <div className="mt-3 sm:mt-0 sm:ml-3">
+                          <a
+                            href="https://github.com/kane-toomer/zovy"
+                            className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 p-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:p-3"
+                          >
+                            View Source Code
+                          </a>
+                        </div>
+                      </div>
+                  </div> 
+              </div>
+
+              {/* PROJECT 3 */}
+              <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center mt-20'>
+                {/* IMAGE */}
+                <img
+                    alt="smartBrain"
+                    className="h-full w-full sm:h-72 md:h-96 lg:h-full lg:w-full rounded-lg lg:order-last"
+                    src={smartBrain}
+                  />
+                {/* CARD */}
+                  <div className="py-6 px-10 max-w-lg bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 sm:justify-self-center mt-5 lg:mt-0">
+                    <h5 className="mb-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Smart Brain</h5>
+
+                    <p className='text-base text-gray-300'><span className='text-white font-bold'>About:</span> Smart brain is a simple facial detection app that allows users to input an image url and using the Clarifai API, Smart Brain will detect a face and draw a box around it. This app is a full-stack project that stores a users credentials and keeps track of the number of entries each user has made ranking each user and comparing them to others in the database.
+                    </p>
+                    <p className='text-base text-indigo-300 mt-5'><span className='text-white font-bold'>Made with:</span>
+                        <ul className='font-bold'>
+                            <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React.js</li>
+                            <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Node.js</li>
+                            <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Express.js</li>
+                            <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> PostgreSQL</li>
+                            <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Knex.js</li>
+                            <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Heroku</li>
+                        </ul>
+                    </p>
+                      
+                      <div className="mt-5 sm:mt-8 sm:flex sm:justify-start lg:justify-start">
+                        <div className="rounded-md shadow">
+                          <a
+                            href="https://kane-smart-brain.herokuapp.com/"
+                            className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 p-3 text-base font-medium text-white hover:bg-indigo-700 md:p-3"
+                          >
+                            View Live Site
+                          </a>
+                        </div>
+                        <div className="mt-3 sm:mt-0 sm:ml-3">
+                          <a
+                            href="https://github.com/kane-toomer/smartbrain"
+                            className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 p-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:p-3"
+                          >
+                            View Source Code
+                          </a>
+                        </div>
+                      </div>
+                  </div> 
+              </div>
+            </div>
           </div>
       </div>
       {/* END PROJECTS SECTION */}  
