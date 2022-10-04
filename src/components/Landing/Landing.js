@@ -109,7 +109,7 @@ const Landing = () => {
                         {item.name}
                       </a>
                     ))}
-                    <a href="#" className="font-medium text-indigo-600 hover:text-indigo-900">
+                    <a href="#contact" className="font-medium text-indigo-600 hover:text-indigo-900">
                       Connect with Me!
                     </a>
                   </div>
@@ -336,7 +336,7 @@ const Landing = () => {
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React.js</li>
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React Router</li>
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React Hooks</li>
-                    <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Bootstrap</li>
+                    <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Tailwind CSS</li>
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Firebase</li>
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Vercel</li>
                   </ul>
