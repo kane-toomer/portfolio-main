@@ -345,7 +345,7 @@ const Landing = () => {
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-start lg:justify-start">
                   <div className="rounded-md shadow">
                     <a
-                      href="https://zovy-3q48sngtb-kane-toomer.vercel.app/"
+                      href="https://zovy-three.vercel.app/"
                       className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 p-3 text-base font-medium text-white hover:bg-indigo-700 md:p-3"
                     >
                       View Live Site
