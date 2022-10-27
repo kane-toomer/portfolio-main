@@ -13,6 +13,8 @@ import mememoji1 from '../../assets/images/mememoji1.svg';
 import mememoji2 from '../../assets/images/mememoji2.svg';
 import smartBrain from '../../assets/images/smartbrain.svg';
 import zovy from '../../assets/images/zovy.svg';
+import headshot from '../../assets/images/headshot.svg';
+// import resume from '../../assets/textfiles/resume.pdf';
 
 const navigation = [
   { name: 'About', href: '#about' },
@@ -174,13 +176,13 @@ const Landing = () => {
                   <span className="block text-indigo-600 xl:inline">Kane!</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
-                  I'm a fullstack developer from Las Vegas! Currently focused on finding roles at early stage startups where I can make an immediate impact while also growing as a developer.
+                  I'm a fullstack developer from Las Vegas! Currently focused on finding roles at early to late stage startups where I can make an immediate impact while also growing as a developer.
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
                     <a
                       href="#"
-                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg"
+                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg" download
                     >
                       Download my Resume!
                     </a>
@@ -212,10 +214,16 @@ const Landing = () => {
       <div className="bg-slate-900 py-12" id="about">
         <div className="my-5 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className='grid grid-rows-1'>
-            <div className='md:grid lg:grid-cols-2 md-grid-cols-1'>
+            <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center items-center'>
 
               {/* PROFESSIONAL IMAGE */}
-              <div></div>
+              <div>
+                <img
+                  alt="smartBrain"
+                  className="h-96 w-full lg:mt-20 mb-10 rounded-md"
+                  src={headshot}
+                />
+              </div>
 
               {/* SYNOPSIS */}
               <div className="">
@@ -235,27 +243,31 @@ const Landing = () => {
                   Here are a few technologies I’ve been working with recently: */}
                   <br />
                   <br />
-                  I have experience with <span className='font-bold text-indigo-300'>HTML</span>, <span className='font-bold text-indigo-300'>CSS</span> & <span className='font-bold text-indigo-300'>JavaScript</span>. I use frameworks like <span className='font-bold text-indigo-300'>React.js</span> & <span className='font-bold text-indigo-300'>React Native</span> (w/ <span className='font-bold text-indigo-300'>Redux</span>). On the backend I like to use <span className='font-bold text-indigo-300'>Firebase</span> (because its easy to implement but scalable). However, I have experience with <span className='font-bold text-indigo-300'>Node.js</span>, <span className='font-bold text-indigo-300'>Express.js</span>, <span className='font-bold text-indigo-300'>Knex.js</span> & <span className='font-bold text-indigo-300'>PostgreSQL</span>.
+                  {/* I have experience with <span className='font-bold text-indigo-300'>HTML</span>, <span className='font-bold text-indigo-300'>CSS</span> & <span className='font-bold text-indigo-300'>JavaScript</span>. I use frameworks like <span className='font-bold text-indigo-300'>React.js</span> & <span className='font-bold text-indigo-300'>React Native</span> (w/ <span className='font-bold text-indigo-300'>Redux</span>). On the backend I like to use <span className='font-bold text-indigo-300'>Firebase</span> (because it's easy to implement but scalable). However, I have experience with <span className='font-bold text-indigo-300'>Node.js</span>, <span className='font-bold text-indigo-300'>Express.js</span>, <span className='font-bold text-indigo-300'>Knex.js</span> & <span className='font-bold text-indigo-300'>PostgreSQL</span>. */}
                 </p>
-                {/* <div className='mt-5'>
+                <div className='mt-5'>
+                  <p className='text-base text-white font-bold mb-5'>I have experience with:</p>
                     <div className='grid grid-rows-1'>
                       <div className='grid grid-cols-2'>
                         <ul className='text-base text-gray-500'>
                           <li className='font-bold text-indigo-300'>Javascript (ES6+)</li>
+                          <li className='font-bold text-indigo-300'>HTML</li>
+                          <li className='font-bold text-indigo-300'>CSS</li>
+                          <li className='font-bold text-indigo-300'>Tailwind</li>
                           <li className='font-bold text-indigo-300'>React</li>
                           <li className='font-bold text-indigo-300'>React Native</li>
-                          <li className='font-bold text-indigo-300'>Redux</li>
-                          <li className='font-bold text-indigo-300'>Firebase</li>
                         </ul>
                         <ul className='text-base text-gray-500'>
+                          <li className='font-bold text-indigo-300'>Redux</li>
                           <li className='font-bold text-indigo-300'>Node.js</li>
                           <li className='font-bold text-indigo-300'>Express.js</li>
                           <li className='font-bold text-indigo-300'>Knex.js</li>
                           <li className='font-bold text-indigo-300'>PostgreSQL</li>
+                          <li className='font-bold text-indigo-300'>Firebase</li>
                         </ul>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
               </div>
 
 
@@ -323,19 +335,18 @@ const Landing = () => {
               {/* IMAGE */}
               <img
                 alt="zovy"
-                className="h-full w-full sm:h-72 md:h-96 lg:h-full lg:w-full"
+                className="h-full w-full sm:h-72 md:h-96 lg:h-full lg:w-full drop-shadow-lg"
                 src={zovy}
               />
               {/* CARD */}
               <div className="py-6 px-10 max-w-lg bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 sm:justify-self-center mt-5 lg:mt-0">
                 <h5 className="mb-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Zovy</h5>
 
-                <p className='text-base text-gray-300'><span className='text-white font-bold'>About:</span> Zovy is a simple streaming platform for 80's and 90's movies and tv shows I watched growing up. This application is a full-stack project where users can register or sign in and be greeted by their dashboard of available listings for their viewing pleasure. User can click on a movie, get a full break down of all the info about the movie and watch a "trailer" of it.</p>
+                <p className='text-base text-gray-300'><span className='text-white font-bold'>About:</span> Zovy is a simple streaming platform for 80's and 90's movies and tv shows I watched growing up. This application is a full-stack project where users can register or sign in and be greeted by their dashboard of available listings for their viewing pleasure. Users can click on a movie, get a full breakdown of all the info about the movie and watch a "trailer" of it.</p>
                 <p className='text-base text-indigo-300 mt-5'><span className='text-white font-bold'>Made with:</span>
                   <ul className='font-bold'>
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React.js</li>
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React Router</li>
-                    <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> React Hooks</li>
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Tailwind CSS</li>
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Firebase</li>
                     <li><FontAwesomeIcon className='text-white ml-2 mr-2 text-sm' icon={faCode} /> Vercel</li>
@@ -368,14 +379,14 @@ const Landing = () => {
               {/* IMAGE */}
               <img
                 alt="smartBrain"
-                className="h-full w-full sm:h-72 md:h-96 lg:h-full lg:w-full"
+                className="h-full w-full sm:h-72 md:h-96 lg:h-full lg:w-full drop-shadow-lg"
                 src={smartBrain}
               />
               {/* CARD */}
               <div className="py-6 px-10 max-w-lg bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 sm:justify-self-center mt-5 lg:mt-0">
                 <h5 className="mb-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Smart Brain</h5>
 
-                <p className='text-base text-gray-300'><span className='text-white font-bold'>About:</span> Smart brain is a simple facial detection app that allows users to input an image url and using the Clarifai API, Smart Brain will detect a face and draw a box around it. This app is a full-stack project that stores a users credentials and keeps track of the number of entries each user has made ranking each user and comparing them to others in the database.
+                <p className='text-base text-gray-300'><span className='text-white font-bold'>About:</span> Smart brain is a simple facial detection app that allows users to input an image url and using the Clarifai API, Smart Brain will detect a face and draw a box around it. This app is a full-stack project that stores a user's credentials and keeps track of the number of entries each user has made, ranking each user and comparing them to others in the database.
                 </p>
                 <p className='text-base text-indigo-300 mt-5'><span className='text-white font-bold'>Made with:</span>
                   <ul className='font-bold'>
@@ -475,7 +486,7 @@ const Landing = () => {
                     {item.name}
                   </a>
                 ))}
-                <a href="#" className="font-medium text-white hover:underline">
+                <a href="#" className="font-medium text-white hover:underline" download>
                   Download my Resume
                 </a>
               </div>
