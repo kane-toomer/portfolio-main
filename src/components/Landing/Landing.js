@@ -14,7 +14,7 @@ import mememoji2 from '../../assets/images/mememoji2.svg';
 import smartBrain from '../../assets/images/smartbrain.svg';
 import zovy from '../../assets/images/zovy.svg';
 import headshot from '../../assets/images/headshot.svg';
-// import resume from '../../assets/textfiles/resume.pdf';
+import resume from '../../assets/textfiles/kanetoomer_resume.pdf';
 
 const navigation = [
   { name: 'About', href: '#about' },
@@ -181,7 +181,7 @@ const Landing = () => {
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
                     <a
-                      href="#"
+                      href={resume}
                       className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg" download
                     >
                       Download my Resume!
@@ -486,7 +486,7 @@ const Landing = () => {
                     {item.name}
                   </a>
                 ))}
-                <a href="#" className="font-medium text-white hover:underline" download>
+                <a href={resume} className="font-medium text-white hover:underline" download>
                   Download my Resume
                 </a>
               </div>
