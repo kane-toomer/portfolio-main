@@ -331,7 +331,7 @@ const Landing = () => {
               </div> */}
 
             {/* PROJECT 2 */}
-            <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center mt-20'>
+            <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center lg:mt-20 mb-10 md:mb-0'>
               {/* IMAGE */}
               <img
                 alt="zovy"
@@ -375,7 +375,7 @@ const Landing = () => {
             </div>
 
             {/* PROJECT 3 */}
-            <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center mt-20'>
+            <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center lg:mt-20'>
               {/* IMAGE */}
               <img
                 alt="smartBrain"
