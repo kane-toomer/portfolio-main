@@ -283,7 +283,6 @@ const Landing = () => {
         <div className="my-5 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-lg text-center font-semibold text-indigo-600">Projects</h2>
           <p className="text-center mt-2 text-3xl font-bold leading-8 tracking-tight sm:text-4xl"></p>
-          <div className='grid grid-rows-2 mt-20'>
 
             {/* PROJECT 1 */}
             {/* <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center'> */}
@@ -331,7 +330,7 @@ const Landing = () => {
               </div> */}
 
             {/* PROJECT 2 */}
-            <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center lg:mt-20 mb-10 md:mb-0'>
+            <div className='grid lg:grid-cols-2 md:space-x-10 sm:justify-self-center mt-20 mb-10 md:mb-0'>
               {/* IMAGE */}
               <img
                 alt="zovy"
@@ -419,7 +418,6 @@ const Landing = () => {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
       {/* END PROJECTS SECTION */}
