@@ -234,8 +234,8 @@ const Landing = () => {
 							{/* PROFESSIONAL IMAGE */}
 							<div>
 								<img
-									alt="smartBrain"
-									className="h-96 w-full lg:mt-20 mb-10 rounded-md"
+									alt="headshot"
+									className="h-1/4 w-full lg:mt-20 mb-10 rounded-md"
 									src={headshot}
 								/>
 							</div>
