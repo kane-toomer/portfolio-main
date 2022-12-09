@@ -438,12 +438,11 @@ const Landing = () => {
 
 							<p className="text-base text-gray-300">
 								<span className="text-white font-bold">About:</span> Zovy is a
-								simple streaming platform for 80's and 90's movies and tv shows
-								I watched growing up. This application is a full-stack project
-								where users can register or sign in and be greeted by their
-								dashboard of available listings for their viewing pleasure.
-								Users can click on a movie, get a full breakdown of all the info
-								about the movie and watch a "trailer" of it.
+								simple streaming platform for movies and tv shows. This
+								application is a full-stack project where users can register or
+								sign in and be greeted by their dashboard of available listings
+								for their viewing pleasure. Users can click on a movie and watch
+								a "trailer" of it.
 							</p>
 							<p className="text-base text-indigo-300 mt-5">
 								<span className="text-white font-bold">Made with:</span>
@@ -468,6 +467,13 @@ const Landing = () => {
 											icon={faCode}
 										/>{" "}
 										Tailwind CSS
+									</li>
+									<li>
+										<FontAwesomeIcon
+											className="text-white ml-2 mr-2 text-sm"
+											icon={faCode}
+										/>{" "}
+										Axios
 									</li>
 									<li>
 										<FontAwesomeIcon
